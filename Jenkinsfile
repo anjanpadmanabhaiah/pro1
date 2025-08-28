@@ -48,13 +48,19 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
+                dir('OneDrive/Desktop/banking-project/Banking-java-project')
+                {
                 sh 'docker build -t myimg .'
+                }
             }
         }
 
         stage('Run Docker Container') {
             steps {
+                dir('OneDrive/Desktop/banking-project/Banking-java-project')
+                {
                 sh 'docker run -dt -p 8091:8091 --name c000 myimg'
+                }
             }
         }
     }
