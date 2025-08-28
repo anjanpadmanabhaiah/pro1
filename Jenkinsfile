@@ -11,8 +11,11 @@ pipeline {
 
         stage('Compile Code') {
             steps {
+                dir('Banking-java-project')
+                {
                 echo 'Starting compilation'
                 sh 'mvn compile'
+                }
             }
         }
 
