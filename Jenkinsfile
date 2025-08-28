@@ -11,7 +11,7 @@ pipeline {
 
         stage('Compile Code') {
             steps {
-                dir('Banking-java-project')
+                dir('OneDrive/Desktop/banking-project/Banking-java-project')
                 {
                 echo 'Starting compilation'
                 sh 'mvn compile'
