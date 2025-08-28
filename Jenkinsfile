@@ -21,19 +21,28 @@ pipeline {
 
         stage('Run Tests') {
             steps {
+                dir('OneDrive/Desktop/banking-project/Banking-java-project')
+                {
                 sh 'mvn test'
+                }
             }
         }
 
         stage('QA Check') {
             steps {
+                dir('OneDrive/Desktop/banking-project/Banking-java-project')
+                {
                 sh 'mvn checkstyle:checkstyle'
+                }
             }
         }
 
         stage('Package Application') {
             steps {
+                dir('OneDrive/Desktop/banking-project/Banking-java-project')
+                {
                 sh 'mvn package'
+                }
             }
         }
 
