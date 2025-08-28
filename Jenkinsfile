@@ -1,12 +1,12 @@
 pipeline{
     agent any
-    stages{
-        stage('checkout the code from github'){
-            steps{
-                 git url: 'https://github.com/anjanpadmanabhaiah/pro1.git'
-                 echo 'github url checkout'
-            }
+      stage('checkout the code from github') {
+        steps {
+            git branch: 'main', url: 'https://github.com/anjanpadmanabhaiah/pro1.git'
+            echo 'Checked out code from GitHub'
         }
+    }
+
         stage('codecompile with anjan'){
             steps{
                 echo 'starting compiling'
